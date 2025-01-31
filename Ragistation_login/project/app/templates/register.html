@@ -1,0 +1,62 @@
+{{msg}}
+
+<h1>this is Ragister page!!</h1>
+
+
+
+<form action="{% url 'register' %}" method="post" enctype="multipart/form-data">
+     {% csrf_token %}
+    <label for="username">Name:</label>
+    <input type="text" name="username" placeholder="Enter your name">
+    <br>
+    <label for="email">Email:</label>
+    <input type="email" name="email" placeholder="Enter your email">
+    <br>
+    <label for="detail">Description:</label>
+    <textarea name="detail" cols="20" rows="5"></textarea>
+    <br>
+    <label for="phone">Contact:</label>
+    <input type="tel" name="phone" placeholder="Enter your phone number">
+    <br>
+    <br>
+    <label for="dob">DOB:</label>
+    <input type="date" name="dob">
+   
+     <input
+        type="range"
+        id="volume"
+        name="volume"
+        min="0"
+        max="100"
+       
+    >
+    
+    <br>
+    <br>
+    <label for="subscribe">Education:</label>
+    <input type="checkbox" name="subscribe" value="one" >B.Tech
+    <input type="checkbox" name="subscribe" value="two" >M.Tech
+    <input type="checkbox" name="subscribe" value="three">P.hd
+    
+    <br>
+    <label for="gender">Gender:</label>
+    <input type="radio" name="gender" value="male"> Male
+    <input type="radio" name="gender" value="female"> Female
+    <br>
+    <label for="profile-pic">Image:</label>
+    <input type="file" name="profile-pic" accept=".jpeg, .png" >
+    <br>
+
+    <label for="resume">Resume:</label>
+    <input type="file" name="resume" accept=".pdf, .doc" >
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" name="password">
+    <br>
+    <label for="password">Con_Password:</label>
+    <input type="password" name="cpassword">
+    <br>
+    <input type="submit" value="Submit">
+
+</form>
+

@@ -1,0 +1,30 @@
+{{msg}}
+<h1>this is login page!!</h1>
+<form action="{% url 'login' %}" method='POST' enctype='multipart'>
+{% csrf_token %}
+
+    <label for="email">Email:</label>
+    <input type="email" name="email" placeholder="Enter your email">
+      <br>
+    <label for="password">Password:</label>
+    <input type="password" name="passward">
+    <input type="submit" value="login">
+
+ 
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
