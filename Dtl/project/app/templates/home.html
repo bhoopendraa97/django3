@@ -1,0 +1,308 @@
+
+
+{% comment %} <h1>Hello My Home Page!!</h1>
+{{data}}
+<br/>
+<br/>
+{% for i in data %}
+      {{i}}
+   <br/>
+   {% endfor %}
+   <br/>
+
+   {% for i in data %}
+   Name:{{i.stu_name}}
+     Email:{{i.stu_email}}
+       Contact:{{i.stu_contact}}
+         City:{{i.stu_city}}
+         
+         {% endfor %}
+         <br/><br/>
+         <table border="4">
+         <tr>
+   <th>Name</th>
+    <th>Email</th>
+    <th>Contact</th>
+    <th>City</th>
+    <th>Edit</th>
+    <th>Delete</th>
+        </tr>
+        {% for i in data %}
+        <tr>
+        <td>{{i.stu_name}}</td>
+        <td>{{i.stu_email}}</td>
+        <td>{{i.stu_contact}}</td>
+        <td>{{i.stu_city}}</td>
+        <td><a href="">Edit</td>
+         <td><a href="">Delete</td>
+  </tr>
+  {% endfor %}
+  </table>
+<br/> {% endcomment %}
+
+
+{% comment %} 
+    <table border="4">
+         <tr>
+   <th>Name</th>
+    <th>Email</th>
+    <th>Contact</th>
+    <th>City</th>
+    <th>Edit</th>
+    <th>Delete</th>
+        </tr>
+        {% for i in data %}
+        <tr>
+        <td>{{i.stu_name}}</td>
+        <td>{{i.stu_email}}</td>
+        <td>{{i.stu_contact}}</td>
+        <td>{{i.stu_city}}</td>
+        <td><a href="">Edit</a></td>
+         <td><a href="{% url 'delete' pk=i.id %}">Delete</a></td>
+  </tr>
+  {% endfor %}
+  </table> {% endcomment %}
+
+
+
+
+{% comment %} {{data}}
+<br/>
+<br/>
+
+{% for i in data %}
+  {{i}}
+  <br/>
+{% endfor %}
+<br/>
+<br/>
+<br/>
+{% for i in data %}
+Name:{{i.stu_name}}
+email:{{i.stu_email}}
+contact:{{i.stu_contact}}
+city:{{i.stu_city}}
+ <br/>
+ {% endfor %}
+<br/>
+<br/>
+<table border="2">
+   <tr>
+      <th>name</th>
+      <th>email</th>
+      <th>contact</th>
+      <th>city</th>
+      <th>edit</th>
+      <th>delete</th>
+   </tr>
+{% for i in data %}
+<tr>
+   <th>{{i.stu_name}}</th>
+   <th>{{i.stu_email}}</th>
+   <th>{{i.stu_contact}}</th>
+   <th>{{i.stu_city}}</th>
+   <th><a href="">edit</a></th>
+   <th><a href="">delete</a></th>
+
+
+</tr>
+{% endfor %}
+</table>
+{{data}}
+<br/>
+<br/>
+
+{% for i in data %}
+  {{i}}
+  <br/>
+{% endfor %}
+<br/>
+<br/>
+<br/>
+{% for i in data %}
+Name:{{i.stu_name}}
+email:{{i.stu_email}}
+contact:{{i.stu_contact}}
+city:{{i.stu_city}}
+ <br/>
+ {% endfor %}
+<br/>
+<br/>
+<table border="2">
+   <tr>
+      <th>name</th>
+      <th>email</th>
+      <th>contact</th>
+      <th>city</th>
+      <th>edit</th>
+      <th>delete</th>
+   </tr>
+{% for i in data %}
+<tr>
+   <th>{{i.stu_name}}</th>
+   <th>{{i.stu_email}}</th>
+   <th>{{i.stu_contact}}</th>
+   <th>{{i.stu_city}}</th>
+   <th><a href="">edit</a></th>
+   <th><a href="">delete</a></th>
+</tr>
+{% endfor %}
+</table>
+{{data}}
+<br/>
+<br/>
+
+{% for i in data %}
+  {{i}}
+  <br/>
+{% endfor %}
+<br/>
+<br/>
+<br/>
+{% for i in data %}
+Name:{{i.stu_name}}
+email:{{i.stu_email}}
+contact:{{i.stu_contact}}
+city:{{i.stu_city}}
+ <br/>
+ {% endfor %}
+<br/>
+<br/>
+<table border="2">
+   <tr>
+      <th>name</th>
+      <th>email</th>
+      <th>contact</th>
+      <th>city</th>
+      <th>edit</th>
+      <th>delete</th>
+   </tr>
+{% for i in data %}
+<tr>
+   <th>{{i.stu_name}}</th>
+   <th>{{i.stu_email}}</th>
+   <th>{{i.stu_contact}}</th>
+   <th>{{i.stu_city}}</th>
+   <th><a href="">edit</a></th>
+   <th><a href="">delete</a></th>
+
+
+</tr>
+{% endfor %}
+
+
+
+</table>
+
+
+{% with value='10' %}
+
+{{ value|add:"2" }} 
+ 
+{% endwith %}
+<br/>
+
+{% with value="jalaj" %}
+
+{{ value|capfirst }} 
+ 
+{% endwith %}
+
+<br/>
+{% with value='10' %}
+
+{{ value|random }} 
+ 
+{% endwith %}
+<br/>
+
+{% with value="SAJAL SHARMA" %}
+
+{{ value|slice:"::2"  }} 
+ 
+{% endwith %} {% endcomment %}
+
+
+
+<table border="2">
+   <tr>
+      <th>S.No</th>
+      <th>name</th>
+      <th>email</th>
+      <th>contact</th>
+      <th>city</th>
+      <th>edit</th>
+      <th>delete</th>
+   </tr>
+{% for i in data %}
+<tr>
+   <th>{{forloop.counter}}</th>
+   <th>{{i.stu_name}}</th>
+   <th>{{i.stu_email}}</th>
+   <th>{{i.stu_contact}}</th>
+   <th>{{i.stu_city}}</th>
+   <th><a href="{%url 'edit' pk=i.id %}">edit</a></th>
+   <th><a href="{%url 'delete' pk=i.id %}">delete</a></th>
+
+
+</tr>
+{% endfor %}
+</table>
+
+{% if data1 %}
+<h3>Update Table</h3>
+<form action="{% url 'updatedat' pk=data1.id %}" method="post">
+   {% csrf_token %}
+   <input type="text" name="name" value="{{data1.stu_name}}"><br>
+   <input type="email" name="email" value="{{data1.stu_email}}" readonly><br>
+   <input type="number" name="contact" value="{{data1.stu_contact}}"><br>
+   <input type="text" name="city" value="{{data1.stu_city}}"><br>
+   <input type="submit" value="Update">
+</form>
+
+{% endif %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %} {% with name="Guest" %}
+{{name}}
+{% endwith %}
+ <br/>
+{% with value=10 %}
+{{value|add:'5'}}
+{% endwith %}
+<br/>
+{% with value='Bhoopendra' %}
+{{value|capfirst}}
+{% endwith %}
+<br/>
+{% with value='Raj' %}
+{{ value|center:"15" }}
+{% endwith %}
+ <br/>
+{% with value='Bhoopendra Ahirwar' %}
+{{ value| slice:"::-1"}}
+{% endwith %}
+<br/>
+{% with user="" %}
+{{user|default:"Guest"}}
+{% endwith %} {% endcomment %}
+
+
+
